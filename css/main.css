@@ -1,0 +1,205 @@
+* {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  
+
+@font-face{
+      font-family: 'OpenSans';
+      src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face{
+      font-family: 'Roboto';
+      src: url(../fonts/Roboto/Roboto-Regular.ttf);
+      font-weight: normal;
+      font-style: normal;
+}
+
+html{
+      font-family: 'OpenSans';
+      width: 100%;
+      height: 100%;
+
+}
+
+a{
+      text-decoration: none;
+      color:white;
+      text-transform: uppercase;
+}
+
+section{
+      margin-bottom: 40px;
+}
+/* Navbar */
+
+#nav{
+      width: 100%;
+      background: black;
+      color: white;
+      padding: 10px 10px;
+      position: fixed;
+      height: 50px;
+      display:flex;
+      justify-content: space-between;
+}
+
+#logo-box{
+      display: flex;
+      height: 100%;
+      width: 250px;
+}
+
+#logo-box p{
+      line-height: 30px;
+      letter-spacing: 3px;
+}
+
+#logo{
+      width: 50px;
+}
+
+#nav ul{
+      list-style-type: none;
+}
+
+#nav li{
+      display: inline-block;
+      padding: 0 10px;
+      line-height: 30px;
+}
+
+.nav-scroll:hover{
+      color: rgb(180, 170, 170) !important;
+}
+
+
+/* Home section */
+
+#home{
+      height: 100vh;
+      background: url(../img/mountain.jpg);
+      background-position: top ;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-color: black;
+      color: white;
+}
+
+#home .background-overlay{
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
+    /* IE6-9 */
+    height: 100%;
+    background-attachment: fixed;
+
+}
+
+.home-content{
+      height: 85%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+}
+
+.home-left{
+      text-align: center;
+      letter-spacing: 3px;
+}
+.home-right{
+      font-size: 50px;
+      padding: 20px;
+}
+.my-name{
+      font-size: 50px;
+}
+.home-scroll-down{
+      height:15%;
+      display: flex;
+      justify-content: center;
+}
+
+      /* Scroll down button */
+
+      .arrow{
+            height: 30px;
+            transform: rotate(90deg);
+      }
+      
+      #scroll-button:hover{
+      cursor: pointer;
+
+      }
+
+/* About-me Section */
+
+h1{
+      letter-spacing: 2px;
+      padding: 0 100px;
+}
+
+.divider{
+display:block;
+width: 90vw;
+border: solid #9fa4a7 0.5px;
+border-radius: 5px;
+margin: 20px auto;
+}
+
+#about-me{
+}
+
+.about-me-content{
+      display: flex;
+      align-items: center;
+}
+.about-me-text{
+      width: 60vw;
+      padding: 10px 5vw;
+      margin: 0;
+      text-align: justify;
+      font-family: 'Roboto';
+      letter-spacing: 1px;
+      line-height: 1.5;
+}
+
+.my-photo{
+      width: 30vw;
+      margin: 0;
+}
+
+.my-photo img{
+      width: 100%;
+      border-radius: 50%;
+}
+
+@media (max-width: 1024px){
+      .about-me-content{
+            flex-direction: column-reverse;
+            
+      }
+      .my-photo{
+            width: 45vw;
+      }
+      .about-me-text{
+            width: 90vw;
+      }
+}
