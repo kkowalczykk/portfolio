@@ -23,18 +23,23 @@
                         <a href="#about-me" class="nav-scroll">O mnie</a>
                   </li>
                   <li>
+                        <a href="#skills" class="nav-scroll">Umiejętności</a>
+                  </li>
+                  <li>
                         <a href="#my-projects" class="nav-scroll">Moje projekty</a>
                   </li>
                   <li>
                         <a href="#contact" class="nav-scroll">Kontakt</a>
                   </li>
             </ul>
+
+            <div class="hamburger">
+                  <div class="line top"></div>
+                  <div class="line mid"></div>
+                  <div class="line bot"></div>
+            </div>
       </nav>
-      <div class="toggle">
-            <span class="line top"></span>
-            <span class="line mid"></span>
-            <span class="line bot"></span>
-      </div>
+
       <div id='overlay'>
             <nav id='overlay-nav'>
 
@@ -93,15 +98,72 @@
                               <img src="./img/photo.jpg" alt="my-photo">
                         </div>
                   </div>
+            </section>
+            <section id="skills">
+                  <h1>Umiejętności</h1>
+                  <span class="divider"></span>
+                  <p>Technologie:</p>
+                  <div class="img-container">
+                        <img src="./img/html.png" alt="HTML">
+                        <img src="./img/css.png" alt="CSS">
+                        <img src="./img/js.png" alt="JavaScript">
+                        <img src="./img/react.png" alt="React">
+                        <img src="./img/sass.png" alt="Sass">
+                  </div>
+                  <p>Narzędzia:</p>
+                  <div class="img-container">
+                        <img src="./img/vscode.png" alt="Visual Studio Code">
+                        <img src="./img/github.png" alt="Github">
+                        <img src="./img/photoshop.png" alt="Photoshop">
 
+                  </div>
             </section>
             <section id="my-projects">
-
+                  <h1>Moje projekty</h1>
+                  <span class="divider"></span>
+                  <div class="projects-wrapper">
+                        <div class="project-container">
+                              <div class="project-overlay">
+                                    <div class="project-name">
+                                          <p>To Do App</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="project-container">
+                              <div class="project-overlay">
+                                    <div class="project-name">
+                                          <p>Snake</p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="project-container">
+                              <div class="project-overlay">
+                                    <div class="project-name">
+                                          <p>My website</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
             </section>
             <section id="contact">
 
             </section>
       </div>
+
+
+      <div class="project-info">
+            <div class="project-info-window">
+                  <div class="cross">
+                        <div class="cross-line one"></div>
+                        <div class="cross-line two"></div>
+                  </div>
+                  <div class="project-info-content">
+
+                  </div>
+            </div>
+      </div>
+
+      <script src="./js/main.js"></script>
 </body>
 
 </html>
