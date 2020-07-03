@@ -70,3 +70,31 @@ document.querySelectorAll('.nav-scroll').forEach(anchor => {
 
       });
 });
+
+
+const sections = document.querySelectorAll('section');
+
+
+document.addEventListener('scroll', function () {
+
+      sections.forEach((element, id) => {
+
+            if (element.getBoundingClientRect().top < 50 || element.getBoundingClientRect().bottom <= 0) {
+                  let target = element.id;
+                  let anchor = document.querySelector(`a[href='#${target}']`);
+                  anchor.classList.add('active');
+                  if (element.getBoundingClientRect().top < element.getBoundingClientRect().height * -1) {
+                        anchor.classList.remove('active');
+                  }
+            } else {
+                  let target = element.id;
+                  let anchor = document.querySelector(`a[href='#${target}']`);
+                  anchor.classList.remove('active');
+            }
+
+      });
+})
+
+window.onload = function () {
+      document.querySelector(`a[href='#home']`).classList.add('active');
+}

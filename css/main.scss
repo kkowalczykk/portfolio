@@ -44,9 +44,10 @@ body{
 }
 
 .scroll-body{
-      background-color: #050d18;
+      background-color: rgb(15,13,24);
       color: white;
       overflow: hidden;
+      width: 100%;
 }
 
 h1{
@@ -78,8 +79,8 @@ h1::before{
 /* Navbar */
 
 #nav{
-      width: 100vw;
-      background: #040519;
+      width: 100%;
+      background: rgb(15,13,24);
       color: white;
       padding: 10px 10px;
       position: fixed;
@@ -117,7 +118,13 @@ h1::before{
 }
 
 .nav-scroll:hover{
-      color: rgb(180, 170, 170) !important;
+      color: rgb(25, 158, 175) !important;
+      text-shadow: rgba(25, 158, 175, 0.5) 0px 0px 30px, rgba(25, 158, 175, 0.67) 0px 0px 60px;
+}
+
+.active{
+      color: rgb(25, 158, 175) !important;
+      text-shadow: rgba(25, 158, 175, 0.5) 0px 0px 30px, rgba(25, 158, 175, 0.67) 0px 0px 60px;
 }
 
 .hamburger{
@@ -204,7 +211,7 @@ h1::before{
     /* Opera 11.10+ */
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
     /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.849) 17%, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.55) 62%, rgb(5, 13, 24) 95%);
+    background: linear-gradient(to bottom,rgb(5, 13, 24) 0%, rgba(5, 13, 24, 0.596) 10%, rgba(0, 0, 0, 0.849) 17%, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.55) 62%, rgb(5, 13, 24) 95%);
     /* W3C */
     height: 100%;
     background-attachment: fixed;
@@ -303,7 +310,7 @@ h1::before{
       top: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(-270deg, rgb(4, 5, 25) 0%, rgba(4, 5, 25, 0.25) 30%, rgba(255, 255, 255, 0) 31%, rgba(255, 255, 255, 0) 70%, rgba(4, 5, 25, 0.25) 71%, rgb(4, 5, 25) 100%);
+      background: linear-gradient(-270deg, rgb(15, 13, 24) 0%, rgba(15, 13, 24, 0.25) 30%, rgba(255, 255, 255, 0) 31%, rgba(255, 255, 255, 0) 70%, rgba(15, 13, 24, 0.25) 71%, rgb(15, 13, 24) 100%);
       content: '';
       height: 100%;
 }
@@ -461,7 +468,7 @@ h1::before{
 
 .projects-wrapper{
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       margin: 100px 0;
       width: 100%;
@@ -485,6 +492,7 @@ h1::before{
       height: 3px;
       width: 300px;
       background: linear-gradient(45deg,rgb(144, 22, 201) 0%, rgba(0,0,255,0) 90%);
+      
 }
 
 .project-container::after{
@@ -547,6 +555,7 @@ h1::before{
 
       .project-info{
             visibility: hidden;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -562,9 +571,10 @@ h1::before{
       }
 
       .project-info-window{
-            width: 70vw;
-            min-height: 60vh;
-            background-color: white;
+            width: 70%;
+            min-height: 60%;
+            background-color: #272333;
+            box-shadow: rgba(57, 100, 156, 0.3)0 0 10px, rgba(57, 100, 156, 0.5)0 0 20px;
             overflow: hidden;
             border-radius: 15px;
             padding: 20px;
@@ -572,6 +582,7 @@ h1::before{
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-around;
             .cross{
                   position: absolute;
                   top: 20px;
@@ -582,7 +593,7 @@ h1::before{
                   display: block;
                   width: 30px;
                   height: 2px;
-                  background-color: black;
+                  background-color: white;
             }
 
             .one{
@@ -590,6 +601,10 @@ h1::before{
             }
             .two{
                   transform: translate(0,-2px) rotate(-45deg);
+            }
+            @media only screen and (max-width: 768px) {
+                  width: 90%;
+                  padding: 10px;
             }
       }
 
@@ -607,19 +622,23 @@ h1::before{
 
       #info-img{
             width: 65%;
-            box-shadow:5px 5px 5px 5px rgba(39, 81, 129, 0.3);
+            box-shadow: rgba(57, 100, 156, 0.3)0 0 10px, rgba(57, 100, 156, 0.5)0 0 20px ;
+            @media only screen and (max-width: 1024px) {
+                  width: 75%;
+            }
+            @media only screen and (max-width: 768px) {
+                  width: 90%;
+            }
       }
       .project-info-content{
             padding: 10px 30px;
             width: 100%;
-            
             letter-spacing: 1px;
       }
 
       .project-info-tech{
             width:100%;
             padding: 10px 30px;
-            
             letter-spacing: 1.5px;
             font-size: 0.8rem;
       }
@@ -628,7 +647,7 @@ h1::before{
             margin-top: 20px;
       }
       #github-link{
-            color: rgb(39, 81, 129);
+            color: rgb(26, 132, 194);
             text-transform: initial;
             letter-spacing: 1.5px;
             font-size:  0.8rem;
