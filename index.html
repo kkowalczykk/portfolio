@@ -11,10 +11,10 @@
 
 <body>
       <nav id='nav'>
-            <div id="logo-box">
+            <!-- <div id="logo-box">
                   <img src="./img/logo.svg" alt="logo" id='logo'>
                   <p>Karol Kowalczyk</p>
-            </div>
+            </div> -->
             <ul class='navbar'>
                   <li>
                         <a href="#home" class="nav-scroll">Intro</a>
@@ -40,11 +40,7 @@
             </div>
       </nav>
 
-      <div id='overlay'>
-            <nav id='overlay-nav'>
 
-            </nav>
-      </div>
       <div class="scroll-body">
             <section id="home">
                   <div class="background-overlay">
@@ -75,7 +71,7 @@
             </section>
             <section id="about-me">
                   <h1>O mnie</h1>
-                  <span class="divider"></span>
+                  <div class="divider"></div>
                   <div class="about-me-content">
                         <div class="about-me-text">
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo in iusto dicta
@@ -93,6 +89,7 @@
                                     doloribus ducimus voluptatibus assumenda omnis. Esse, reprehenderit iure cumque
                                     veritatis
                                     dolorem libero quos, neque quam doloremque excepturi et numquam atque error.</p>
+
                         </div>
                         <div class="my-photo">
                               <img src="./img/photo.jpg" alt="my-photo">
@@ -101,28 +98,59 @@
             </section>
             <section id="skills">
                   <h1>Umiejętności</h1>
-                  <span class="divider"></span>
-                  <p>Technologie:</p>
-                  <div class="img-container">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/js.png" alt="JavaScript">
-                        <img src="./img/react.png" alt="React">
-                        <img src="./img/sass.png" alt="Sass">
-                  </div>
-                  <p>Narzędzia:</p>
-                  <div class="img-container">
-                        <img src="./img/vscode.png" alt="Visual Studio Code">
-                        <img src="./img/github.png" alt="Github">
-                        <img src="./img/photoshop.png" alt="Photoshop">
+                  <div class="divider"></div>
+                  <div id='skills-container'>
+                        <p class='skills-p'>Technologie i narzędzia z których korzystam:</p>
+                        <div class="row">
 
-                  </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/html.png" alt="HTML">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/js.png" alt="JavaScript">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/css.png" alt="CSS"></div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/react.png" alt="React">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/sass.png" alt="Sass">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/vscode.png"
+                                          alt="Visual Studio Code">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/github.png" alt="Github">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/photoshop.png"
+                                          alt="Photoshop">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/illustrator.png"
+                                          alt="Illustrator">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/figma.png" alt="Figma">
+                              </div>
+
+
+                        </div>
+                        <p class='skills-p'>Still learning:</p>
+                        <div class="row">
+                              <div class="col skill-icon"><img class='img-skill' src="./img/nodejs.png" alt="Node.js">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/express.png" alt="Express">
+                              </div>
+                              <div class="col skill-icon"><img class='img-skill' src="./img/mongodb.png" alt="MongoDB">
+                              </div>
+                        </div>
+                        <!-- <p>Narzędzia:</p>
+                        <div class="img-container">
+                              <img src="./img/vscode.png" alt="Visual Studio Code">
+                              <img src="./img/github.png" alt="Github">
+                              <img src="./img/photoshop.png" alt="Photoshop">
+
+                        </div> -->
             </section>
             <section id="my-projects">
                   <h1>Moje projekty</h1>
-                  <span class="divider"></span>
+                  <div class="divider"></div>
                   <div class="projects-wrapper">
                         <div class="project-container">
+                              <img src='/img/projects/todoapp.jpg' alt="todoapp" id="project-img">
                               <div class="project-overlay">
                                     <div class="project-name">
                                           <p>To Do App</p>
@@ -130,6 +158,7 @@
                               </div>
                         </div>
                         <div class="project-container">
+                              <img src='/img/projects/snake.jpg' alt="todoapp" id="project-img">
                               <div class="project-overlay">
                                     <div class="project-name">
                                           <p>Snake</p>
@@ -137,6 +166,7 @@
                               </div>
                         </div>
                         <div class="project-container">
+                              <img src='/img/projects/my-website.jpg' alt="todoapp" id="project-img">
                               <div class="project-overlay">
                                     <div class="project-name">
                                           <p>My website</p>
@@ -145,8 +175,44 @@
                         </div>
                   </div>
             </section>
-            <section id="contact">
+            <div class="cv">
+                  <div class="overlay">
+                        <a href="./img/bcg.jpg" download>
+                              <div class="get-cv-button">
+                                    <p>Pobierz CV</p>
+                              </div>
+                        </a>
+                  </div>
+            </div>
 
+            <section id="contact">
+                  <h1>Kontakt</h1>
+                  <div class="divider"></div>
+                  <div id="contact-text">
+                        Jeżeli chcesz się ze mną skontaktować możesz:
+                        <ul>
+                              <li>✅ napisać maila - <span id="my-mail"><a href="mailto: kovalczyk97@gmail.com">
+                                                ✉️kovalczyk97@gmail.com✉️ </a></span> </li>
+                              <li>✅ napisać na <span id="my-facebook"><a
+                                                href="https://www.facebook.com/karol.kowalczyk97">
+                                                🔷Facebooku🔷
+                                          </a></span> </li>
+                              <li>✅ skorzystać z poniższego formularza:</li>
+                        </ul>
+                  </div>
+
+
+                  <div id="form-box">
+                        <form action="./php/form.php" id="contact-form" method="post">
+                              <label for="name">Twoje imię</label>
+                              <input type='text' name='name' />
+                              <label for="email">Twój email</label>
+                              <input type='text' name='email' />
+                              <label for="message">Treść wiadomości</label>
+                              <textarea name='message' id="input-message"></textarea>
+                              <button type='submit'>Wyślij</button>
+                        </form>
+                  </div>
             </section>
       </div>
 
@@ -157,13 +223,17 @@
                         <div class="cross-line one"></div>
                         <div class="cross-line two"></div>
                   </div>
-                  <div class="project-info-content">
+                  <div class="project-info-header"></div>
+                  <div class="project-info-image"></div>
+                  <div class="project-info-content"></div>
+                  <div class="project-info-tech"></div>
+                  <div class="project-info-github"></div>
 
-                  </div>
             </div>
       </div>
 
       <script src="./js/main.js"></script>
+      <script src="./js/form.js"></script>
 </body>
 
 </html>
