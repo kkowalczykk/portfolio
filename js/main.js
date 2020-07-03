@@ -7,6 +7,10 @@ const botLine = document.querySelector(".bot");
 const projects = document.querySelectorAll(".project-container");
 const projectInfo = document.querySelector('.project-info');
 const infoContent = document.querySelector('.project-info-content');
+const infoHeader = document.querySelector('.project-info-header');
+const infoImage = document.querySelector('.project-info-image');
+const infoTech = document.querySelector('.project-info-tech');
+const infoGithub = document.querySelector('.project-info-github');
 const cross = document.querySelector('.cross');
 
 hamburger.addEventListener('click', () => {
@@ -26,13 +30,25 @@ for (let i = 0; i < projects.length; i++) {
             projectInfo.classList.add('info-open');
             switch (i) {
                   case 0:
-                        infoContent.innerHTML = "To Do App";
+                        infoHeader.innerHTML = "To Do App";
+                        infoImage.innerHTML = "<img src='/img/projects/todoapp.jpg' alt='To Do App' id='info-img'>"
+                        infoContent.innerHTML = "Prosta aplikacja umożliwiająca tworzenie listy zadań, określanie dat ich wykonania oraz nadawanie priorytetu poszczególnym zadaniom.";
+                        infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, React";
+                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   case 1:
-                        infoContent.innerHTML = "Snake";
+                        infoHeader.innerHTML = "Snake";
+                        infoImage.innerHTML = "<img src='/img/projects/snake.jpg' alt='Snake' id='info-img'>"
+                        infoContent.innerHTML = "Uproszczona wersja bardzo popularnej gry zręcznościowej, polegająca na zdobyciu jak największej liczby punktów.";
+                        infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript";
+                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   case 2:
-                        infoContent.innerHTML = "My website";
+                        infoHeader.innerHTML = "My website";
+                        infoImage.innerHTML = "<img src='/img/projects/my-website.jpg' alt='My website' id='info-img'>"
+                        infoContent.innerHTML = "Jest to strona którą aktualnie przeglądasz, przedstawiająca moją osobę, umiejętności, wykonane projeky oraz umożliwiająca kontakt ze mną.";
+                        infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, PHP";
+                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   default: infoContent.innerHTML = "...";
             }
@@ -41,4 +57,16 @@ for (let i = 0; i < projects.length; i++) {
 
 cross.addEventListener('click', () => {
       projectInfo.classList.remove('info-open');
+});
+
+document.querySelectorAll('.nav-scroll').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                  inline: 'nearest',
+            });
+
+      });
 });
