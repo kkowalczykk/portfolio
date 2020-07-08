@@ -32,22 +32,29 @@ for (let i = 0; i < projects.length; i++) {
                   case 0:
                         infoHeader.innerHTML = "To Do App";
                         infoImage.innerHTML = "<img src='/img/projects/todoapp.jpg' alt='To Do App' id='info-img'>"
-                        infoContent.innerHTML = "Prosta aplikacja umożliwiająca tworzenie listy zadań, określanie dat ich wykonania oraz nadawanie priorytetu poszczególnym zadaniom.";
+                        infoContent.innerHTML = "Simple version of To-Do Application built with React. ";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, React";
                         infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   case 1:
                         infoHeader.innerHTML = "Snake";
                         infoImage.innerHTML = "<img src='/img/projects/snake.jpg' alt='Snake' id='info-img'>"
-                        infoContent.innerHTML = "Uproszczona wersja bardzo popularnej gry zręcznościowej, polegająca na zdobyciu jak największej liczby punktów.";
+                        infoContent.innerHTML = "";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript";
                         infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   case 2:
-                        infoHeader.innerHTML = "My website";
+                        infoHeader.innerHTML = "My portfolio";
                         infoImage.innerHTML = "<img src='/img/projects/my-website.jpg' alt='My website' id='info-img'>"
-                        infoContent.innerHTML = "Jest to strona którą aktualnie przeglądasz, przedstawiająca moją osobę, umiejętności, wykonane projeky oraz umożliwiająca kontakt ze mną.";
-                        infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, PHP";
+                        infoContent.innerHTML = "It is website you are curenttly watching.";
+                        infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, GSAP";
+                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
+                        break;
+                  case 3:
+                        infoHeader.innerHTML = "Soring Visualizer";
+                        infoImage.innerHTML = "<img src='/img/projects/visualizer.jpg' alt='My website' id='info-img'>"
+                        infoContent.innerHTML = "Sorting Visualizer is an application which can show how sorting algorithms (Bublle Sort, Selection Sort) works.";
+                        infoTech.innerHTML = "<span id='tech-used'>Built with: </span> React, Javascript, HTML, CSS";
                         infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
                         break;
                   default: infoContent.innerHTML = "...";
@@ -88,13 +95,30 @@ document.addEventListener('scroll', function () {
                   }
             } else {
                   let target = element.id;
-                  let anchor = document.querySelector(`a[href='#${target}']`);
-                  anchor.classList.remove('active');
+                  if (target != 'cv') {
+                        let anchor = document.querySelector(`a[href='#${target}']`);
+                        anchor.classList.remove('active');
+                  }
             }
 
       });
 })
 
 window.onload = function () {
-      document.querySelector(`a[href='#home']`).classList.add('active');
+      sections.forEach((element, id) => {
+
+            if (element.getBoundingClientRect().top < 100 || element.getBoundingClientRect().bottom <= 0) {
+                  let target = element.id;
+                  let anchor = document.querySelector(`a[href='#${target}']`);
+                  anchor.classList.add('active');
+                  if (element.getBoundingClientRect().top < element.getBoundingClientRect().height * -1) {
+                        anchor.classList.remove('active');
+                  }
+            } else {
+                  let target = element.id;
+                  let anchor = document.querySelector(`a[href='#${target}']`);
+                  anchor.classList.remove('active');
+            }
+
+      });
 }
