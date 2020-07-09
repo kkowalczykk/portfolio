@@ -51,7 +51,7 @@ for (let i = 0; i < projects.length; i++) {
                         infoImage.innerHTML = "<img src='/img/projects/my-website.jpg' alt='My website' id='info-img'>"
                         infoContent.innerHTML = "It is website you are curenttly watching.";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, GSAP";
-                        githubLink.innerHTML = "<a href='' id='project-link'>Github</a>"
+                        githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/portfolio' id='project-link'>Github</a>"
                         liveLink.innerHTML = "<a href='#' id='project-link'>Go Live</a>"
                         break;
                   case 3:
