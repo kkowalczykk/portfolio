@@ -14,19 +14,6 @@
       font-style: normal;
 }
   
-@font-face{
-      font-family: 'OpenSans';
-      src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
-      font-weight: normal;
-      font-style: normal;
-}
-
-@font-face{
-      font-family: 'Roboto';
-      src: url(../fonts/Roboto/Roboto-Regular.ttf);
-      font-weight: normal;
-      font-style: normal;
-}
 
 @font-face{
       font-family: 'SpaceMono';
@@ -128,7 +115,7 @@ h1::before{
 
 .navbar li{
       display: inline-block;
-      padding: 0 10px;
+      padding: 0 20px;
       line-height: 30px;
 }
 
@@ -291,8 +278,7 @@ h1::before{
 
 
 
-#about-me{
-}
+
 
 .about-me-content{
       padding: 0 50px;
@@ -309,6 +295,11 @@ h1::before{
       letter-spacing: 1px;
       line-height: 1.5;
       position: relative;
+
+      p{
+            margin-bottom: 30px;
+            max-width: 900px;
+      }
 }
 
 
@@ -412,6 +403,9 @@ h1::before{
       height: 3px;
       width: 300px;
       background: linear-gradient(45deg,rgb(144, 22, 201) 0%, rgba(0,0,255,0) 90%);
+      @media only screen and (max-width: 1280px){
+          visibility: hidden;  
+      }
 }
 .skills-p::after{
       content: '';
@@ -422,6 +416,9 @@ h1::before{
       height: 3px;
       width: 300px;
       background: linear-gradient(45deg,rgba(0,0,255,0) 0%, rgb(144, 22, 201) 90%);
+      @media only screen and (max-width: 1280px){
+            visibility: hidden;  
+        }
 }
 
 .row {
@@ -502,11 +499,14 @@ h1::before{
 }
 
 .project-container{
-      max-width: 50vw;
+      
       position: relative;
       cursor: pointer;
       margin-bottom: 100px;
       box-shadow: rgba(138, 73, 151, 0.363) 0px 0px 30px, rgba(121, 60, 133, 0.596) 0px 0px 60px;
+      @media only screen and (max-width: 768px){
+            max-width: 75%;
+        }
 }
 
 .project-container::before{
@@ -518,7 +518,9 @@ h1::before{
       height: 3px;
       width: 300px;
       background: linear-gradient(45deg,rgb(144, 22, 201) 0%, rgba(0,0,255,0) 90%);
-      
+      @media only screen and (max-width: 1280px){
+            visibility: hidden;  
+        }
 }
 
 .project-container::after{
@@ -530,6 +532,9 @@ h1::before{
       height: 3px;
       width: 300px;
       background: linear-gradient(45deg,rgba(0,0,255,0) 0%, rgb(144, 22, 201) 90%);
+      @media only screen and (max-width: 1280px){
+            visibility: hidden;  
+        }
 }
 
 #project-img{
@@ -581,7 +586,7 @@ h1::before{
 
       .project-info{
             visibility: hidden;
-            color: white;
+            color: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -593,7 +598,6 @@ h1::before{
             z-index: 4;
             opacity: 0;
             transition: visibility 0s, opacity 0.15s ease-in;
-            font-family: 'Roboto';
       }
 
       .project-info-window{
@@ -667,17 +671,24 @@ h1::before{
             padding: 10px 30px;
             letter-spacing: 1.5px;
             font-size: 0.8rem;
+            color: rgb(0, 109, 182);
       }
 
-      .project-info-github{
+      .project-info-links{
             margin-top: 20px;
+            display: flex;
       }
-      #github-link{
-            color: rgb(26, 132, 194);
+
+      #project-link{
+            color: rgb(22, 197, 197);
+            margin: 0 20px;
             text-transform: initial;
-            letter-spacing: 1.5px;
-            font-size:  0.8rem;
+            font-size:  1.2rem;
             font-weight: bold;
+      }
+
+      #project-link:hover{
+            color: rgb(147, 218, 240);
       }
 
       .info-open{

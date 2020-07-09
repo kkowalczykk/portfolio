@@ -10,7 +10,8 @@ const infoContent = document.querySelector('.project-info-content');
 const infoHeader = document.querySelector('.project-info-header');
 const infoImage = document.querySelector('.project-info-image');
 const infoTech = document.querySelector('.project-info-tech');
-const infoGithub = document.querySelector('.project-info-github');
+const githubLink = document.querySelector('.github-link');
+const liveLink = document.querySelector('.live-link');
 const cross = document.querySelector('.cross');
 
 hamburger.addEventListener('click', () => {
@@ -34,28 +35,32 @@ for (let i = 0; i < projects.length; i++) {
                         infoImage.innerHTML = "<img src='/img/projects/todoapp.jpg' alt='To Do App' id='info-img'>"
                         infoContent.innerHTML = "Simple version of To-Do Application built with React. ";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, React";
-                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
+                        githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/todo-app' id='project-link'>Github</a>"
+                        liveLink.innerHTML = "<a href='https://kkowalczykk.github.io/todo-app/' id='project-link'>Go Live</a>"
                         break;
                   case 1:
                         infoHeader.innerHTML = "Snake";
                         infoImage.innerHTML = "<img src='/img/projects/snake.jpg' alt='Snake' id='info-img'>"
                         infoContent.innerHTML = "";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript";
-                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
+                        githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/snake-game' id='project-link'>Github</a>"
+                        liveLink.innerHTML = "<a href='https://kkowalczykk.github.io/snake-game/' id='project-link'>Go Live</a>"
                         break;
                   case 2:
                         infoHeader.innerHTML = "My portfolio";
                         infoImage.innerHTML = "<img src='/img/projects/my-website.jpg' alt='My website' id='info-img'>"
                         infoContent.innerHTML = "It is website you are curenttly watching.";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, GSAP";
-                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
+                        githubLink.innerHTML = "<a href='' id='project-link'>Github</a>"
+                        liveLink.innerHTML = "<a href='#' id='project-link'>Go Live</a>"
                         break;
                   case 3:
-                        infoHeader.innerHTML = "Soring Visualizer";
+                        infoHeader.innerHTML = "Sorting Visualizer";
                         infoImage.innerHTML = "<img src='/img/projects/visualizer.jpg' alt='My website' id='info-img'>"
                         infoContent.innerHTML = "Sorting Visualizer is an application which can show how sorting algorithms (Bublle Sort, Selection Sort) works.";
                         infoTech.innerHTML = "<span id='tech-used'>Built with: </span> React, Javascript, HTML, CSS";
-                        infoGithub.innerHTML = "<a href='' id='github-link'>Sprawdź na Github</a>"
+                        githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/Sorting-Visualizer' id='project-link'>Github</a>"
+                        liveLink.innerHTML = "<a href='https://kkowalczykk.github.io/Sorting-Visualizer/' id='project-link'>Go Live</a>"
                         break;
                   default: infoContent.innerHTML = "...";
             }

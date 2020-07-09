@@ -14,20 +14,6 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(../fonts/Roboto/Roboto-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'SpaceMono';
   src: url(../fonts/SpaceMono/SpaceMono-Regular.ttf);
   font-weight: normal;
@@ -131,7 +117,7 @@ h1::before {
 
 .navbar li {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 20px;
   line-height: 30px;
 }
 
@@ -302,6 +288,11 @@ h1::before {
   position: relative;
 }
 
+.about-me-text p {
+  margin-bottom: 30px;
+  max-width: 900px;
+}
+
 .about-me-text::after {
   background-image: url("../img/blinks.png");
   background-size: 90%;
@@ -400,6 +391,12 @@ h1::before {
   background: linear-gradient(45deg, #9016c9 0%, rgba(0, 0, 255, 0) 90%);
 }
 
+@media only screen and (max-width: 1280px) {
+  .skills-p::before {
+    visibility: hidden;
+  }
+}
+
 .skills-p::after {
   content: '';
   position: absolute;
@@ -409,6 +406,12 @@ h1::before {
   height: 3px;
   width: 300px;
   background: linear-gradient(45deg, rgba(0, 0, 255, 0) 0%, #9016c9 90%);
+}
+
+@media only screen and (max-width: 1280px) {
+  .skills-p::after {
+    visibility: hidden;
+  }
 }
 
 .row {
@@ -481,11 +484,16 @@ h1::before {
 }
 
 .project-container {
-  max-width: 50vw;
   position: relative;
   cursor: pointer;
   margin-bottom: 100px;
   box-shadow: rgba(138, 73, 151, 0.363) 0px 0px 30px, rgba(121, 60, 133, 0.596) 0px 0px 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  .project-container {
+    max-width: 75%;
+  }
 }
 
 .project-container::before {
@@ -499,6 +507,12 @@ h1::before {
   background: linear-gradient(45deg, #9016c9 0%, rgba(0, 0, 255, 0) 90%);
 }
 
+@media only screen and (max-width: 1280px) {
+  .project-container::before {
+    visibility: hidden;
+  }
+}
+
 .project-container::after {
   content: '';
   position: absolute;
@@ -508,6 +522,12 @@ h1::before {
   height: 3px;
   width: 300px;
   background: linear-gradient(45deg, rgba(0, 0, 255, 0) 0%, #9016c9 90%);
+}
+
+@media only screen and (max-width: 1280px) {
+  .project-container::after {
+    visibility: hidden;
+  }
 }
 
 #project-img {
@@ -569,7 +589,6 @@ h1::before {
   z-index: 4;
   opacity: 0;
   transition: visibility 0s, opacity 0.15s ease-in;
-  font-family: 'Roboto';
 }
 
 .project-info-window {
@@ -655,18 +674,24 @@ h1::before {
   padding: 10px 30px;
   letter-spacing: 1.5px;
   font-size: 0.8rem;
+  color: #006db6;
 }
 
-.project-info-github {
+.project-info-links {
   margin-top: 20px;
+  display: flex;
 }
 
-#github-link {
-  color: #1a84c2;
+#project-link {
+  color: #16c5c5;
+  margin: 0 20px;
   text-transform: initial;
-  letter-spacing: 1.5px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
+}
+
+#project-link:hover {
+  color: #93daf0;
 }
 
 .info-open {
