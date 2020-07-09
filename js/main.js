@@ -32,7 +32,7 @@ for (let i = 0; i < projects.length; i++) {
             switch (i) {
                   case 0:
                         infoHeader.innerHTML = "To Do App";
-                        infoImage.innerHTML = "<img src='/img/projects/todoapp.jpg' alt='To Do App' id='info-img'>"
+                        infoImage.innerHTML = "<img src='./img/projects/todoapp.jpg' alt='To Do App' id='info-img'>"
                         infoContent.innerHTML = "Simple version of To-Do Application built with React. ";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, React";
                         githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/todo-app' id='project-link'>Github</a>"
@@ -40,7 +40,7 @@ for (let i = 0; i < projects.length; i++) {
                         break;
                   case 1:
                         infoHeader.innerHTML = "Snake";
-                        infoImage.innerHTML = "<img src='/img/projects/snake.jpg' alt='Snake' id='info-img'>"
+                        infoImage.innerHTML = "<img src='./img/projects/snake.jpg' alt='Snake' id='info-img'>"
                         infoContent.innerHTML = "";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript";
                         githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/snake-game' id='project-link'>Github</a>"
@@ -48,7 +48,7 @@ for (let i = 0; i < projects.length; i++) {
                         break;
                   case 2:
                         infoHeader.innerHTML = "My portfolio";
-                        infoImage.innerHTML = "<img src='/img/projects/my-website.jpg' alt='My website' id='info-img'>"
+                        infoImage.innerHTML = "<img src='./img/projects/my-website.jpg' alt='My website' id='info-img'>"
                         infoContent.innerHTML = "It is website you are curenttly watching.";
                         infoTech.innerHTML = "<span id='tech-used'>Wykorzystane technologie: </span> HTML, CSS, JavaScript, GSAP";
                         githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/portfolio' id='project-link'>Github</a>"
@@ -56,7 +56,7 @@ for (let i = 0; i < projects.length; i++) {
                         break;
                   case 3:
                         infoHeader.innerHTML = "Sorting Visualizer";
-                        infoImage.innerHTML = "<img src='/img/projects/visualizer.jpg' alt='My website' id='info-img'>"
+                        infoImage.innerHTML = "<img src='./img/projects/visualizer.jpg' alt='My website' id='info-img'>"
                         infoContent.innerHTML = "Sorting Visualizer is an application which can show how sorting algorithms (Bublle Sort, Selection Sort) works.";
                         infoTech.innerHTML = "<span id='tech-used'>Built with: </span> React, Javascript, HTML, CSS";
                         githubLink.innerHTML = "<a href='https://github.com/kkowalczykk/Sorting-Visualizer' id='project-link'>Github</a>"
