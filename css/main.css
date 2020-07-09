@@ -551,6 +551,13 @@ h1::before {
   align-items: center;
 }
 
+@media only screen and (max-width: 1280px) {
+  .project-name {
+    transform: translate(0, 0);
+    height: 30px;
+  }
+}
+
 .project-name p {
   margin: auto;
   color: white;
@@ -586,9 +593,10 @@ h1::before {
   min-height: 60%;
   background-color: #272333;
   box-shadow: rgba(57, 100, 156, 0.3) 0 0 10px, rgba(57, 100, 156, 0.5) 0 0 20px;
-  overflow: hidden;
+  overflow: scroll;
   border-radius: 15px;
   padding: 20px;
+  padding-top: 50px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -625,15 +633,37 @@ h1::before {
   }
 }
 
+@media only screen and (max-height: 480px) {
+  .project-info-window {
+    height: 70%;
+    width: 60%;
+    overflow-y: scroll;
+  }
+}
+
 .project-info-header {
   letter-spacing: 1.5px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  min-height: 10%;
+}
+
+@media only screen and (max-height: 480px) {
+  .project-info-header {
+    font-size: 12px;
+  }
 }
 
 .project-info-image {
   width: 100%;
   text-align: center;
   padding: 20px 0;
+}
+
+@media only screen and (max-height: 480px) {
+  .project-info-image {
+    padding: 5px 0;
+  }
 }
 
 #info-img {
@@ -653,10 +683,23 @@ h1::before {
   }
 }
 
+@media only screen and (max-height: 480px) {
+  #info-img {
+    width: 45%;
+    overflow-y: scroll;
+  }
+}
+
 .project-info-content {
   padding: 10px 30px;
   width: 100%;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-height: 480px) {
+  .project-info-content {
+    font-size: 8px;
+  }
 }
 
 .project-info-tech {
@@ -667,9 +710,22 @@ h1::before {
   color: #006db6;
 }
 
+@media only screen and (max-height: 480px) {
+  .project-info-tech {
+    font-size: 8px;
+    padding: 5px 15px;
+  }
+}
+
 .project-info-links {
   margin-top: 20px;
   display: flex;
+}
+
+@media only screen and (max-height: 480px) {
+  .project-info-links {
+    margin-top: 10px;
+  }
 }
 
 #project-link {
@@ -678,6 +734,12 @@ h1::before {
   text-transform: initial;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+@media only screen and (max-height: 480px) {
+  #project-link {
+    font-size: 10px;
+  }
 }
 
 #project-link:hover {
@@ -725,10 +787,11 @@ h1::before {
 
 #contact {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 #contact-container {
@@ -739,6 +802,10 @@ h1::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#contact-container span {
+  padding: 0 10px;
 }
 
 .contact-list {

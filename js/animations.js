@@ -123,7 +123,7 @@ contactLinks.forEach((element) => {
 
 gsap.from('.contact-container span', {
       scrollTrigger: {
-            trigger: element,
+            trigger: '.contact-container span',
             start: 'top bottom-=100px',
       },
       opacity: 0,
